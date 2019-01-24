@@ -10,7 +10,8 @@ const getEventURL = (pageID) => `https://facebook.com/pg/${pageID}/events`;
 async function run() {
     const browser = await puppeteer.launch({
         headless: false,
-        defaultViewport: { width: 1920, height: 926 }
+        defaultViewport: { width: 1920, height: 926 },
+        args: ['--lang=en-US,en']
     });
     const page = await browser.newPage();
 
