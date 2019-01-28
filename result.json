@@ -5,147 +5,168 @@
             "date": "4 Oct 2018–18 Oct 2018",
             "location": "International Organisation of Software Developers",
             "city": "New Delhi",
-            "guests": "223 guests"
+            "guests": "223 guests",
+            "link": "https://www.facebook.com/events/675313119519772/"
         },
         {
             "name": "IOSD GTBIT Techweek, Day 1- Intro to Raspberry Pi",
             "date": "Mon 14:00 UTC+05:30",
             "location": "Guru Tegh Bahadur Institute of Technology",
             "city": "New Delhi",
-            "guests": "268 guests"
+            "guests": "268 guests",
+            "link": "https://www.facebook.com/events/459593011216596/"
         },
         {
             "name": "IOSD Orientation",
             "date": "Thu 17:30 UTC+05:30",
             "location": "Gandhi Bhavan, Jadavpur University",
             "city": "Kolkata, West Bengal, India",
-            "guests": "1,196 guests"
+            "guests": "1,195 guests",
+            "link": "https://www.facebook.com/events/320544425384435/"
         },
         {
             "name": "IOSD TechDay Summer 2018",
             "date": "Tue 12:05 UTC+05:30",
             "location": "Delhi Technological University",
             "city": "Delhi, India",
-            "guests": "741 guests"
+            "guests": "741 guests",
+            "link": "https://www.facebook.com/events/454869578366215/"
         },
         {
             "name": "Interview Prepration with Prateek Narang",
             "date": "Fri 20:00 UTC+05:30",
             "location": "Stream at Twitch.tv/iosdofficial",
             "city": "",
-            "guests": "1,065 guests"
+            "guests": "1,065 guests",
+            "link": "https://www.facebook.com/events/252584042045254/"
         },
         {
             "name": "Fit the Line - Machine Learning Live Stream",
             "date": "Sat 21:00 UTC+05:30",
             "location": "Stream at Twitch.tv/iosdofficial",
             "city": "",
-            "guests": "364 guests"
+            "guests": "364 guests",
+            "link": "https://www.facebook.com/events/2020519854829119"
         },
         {
             "name": "IOSD TechDay Spring 2018",
             "date": "Sat 18:00 UTC+05:30",
             "location": "International Organisation of Software Developers",
             "city": "New Delhi",
-            "guests": "527 guests"
+            "guests": "527 guests",
+            "link": "https://www.facebook.com/events/119897162203028/"
         },
         {
             "name": "Game Development Workshop by Coding Blocks | IOSD Gaming",
             "date": "Sat 12:00 UTC+05:30",
             "location": "Maharaja Agrasen Institute of Technology",
             "city": "New Delhi",
-            "guests": "395 guests"
+            "guests": "395 guests",
+            "link": "https://www.facebook.com/events/1970708453193535"
         },
         {
             "name": "Codesaga Impulse'18 IOSD MAIT",
             "date": "Sat 09:30 UTC+05:30",
             "location": "Maharaja Agrasen Institute of Technology",
             "city": "New Delhi",
-            "guests": "149 guests"
+            "guests": "149 guests",
+            "link": "https://www.facebook.com/events/549805892067008/"
         },
         {
             "name": "PIXEL Impulse'18 IOSD-Mait",
             "date": "Fri 14:00 UTC+05:30",
             "location": "Maharaja Agrasen Institute of Technology",
             "city": "New Delhi",
-            "guests": "92 guests"
+            "guests": "92 guests",
+            "link": "https://www.facebook.com/events/2152423614987650"
         },
         {
             "name": "MAIT Hacks | Impuse'18 IOSD MAIT",
             "date": "7 Mar 2018–9 Mar 2018",
             "location": "Maharaja Agrasen Institute of Technology",
             "city": "New Delhi",
-            "guests": "1,701 guests"
+            "guests": "1,701 guests",
+            "link": "https://www.facebook.com/events/1600170753402092"
         },
         {
             "name": "Comedy Evening Starring Aakash Gupta",
             "date": "Wed 17:00 UTC+05:30",
             "location": "Delhi Technological University",
             "city": "Delhi, India",
-            "guests": "712 guests"
+            "guests": "712 guests",
+            "link": "https://www.facebook.com/events/546180615757276/"
         },
         {
             "name": "Don't Know Code | Synergy'18 DTU",
             "date": "Tue 14:00 UTC+05:30",
             "location": "Delhi Technological University",
             "city": "Delhi, India",
-            "guests": "477 guests"
+            "guests": "477 guests",
+            "link": "https://www.facebook.com/events/579337085746137/"
         },
         {
             "name": "Code in Less | Synergy'18,DTU",
             "date": "Tue 08:00 UTC+05:30",
             "location": "Delhi Technological University",
             "city": "Delhi, India",
-            "guests": "799 guests"
+            "guests": "799 guests",
+            "link": "https://www.facebook.com/events/347348732448521/"
         },
         {
             "name": "DevSprint |Synergy'18 DTU",
             "date": "12 Feb 2018–13 Feb 2018",
             "location": "Delhi Technological University",
             "city": "Delhi, India",
-            "guests": "692 guests"
+            "guests": "692 guests",
+            "link": "https://www.facebook.com/events/147429445963464/"
         },
         {
             "name": "Algo Design | Synergy'18, DTU",
             "date": "Mon 13:00 UTC+05:30",
             "location": "Delhi Technological University",
             "city": "Delhi, India",
-            "guests": "851 guests"
+            "guests": "851 guests",
+            "link": "https://www.facebook.com/events/151943365506489/"
         },
         {
             "name": "Code War 2 | Synergy'18, DTU",
             "date": "Mon 09:00 UTC+05:30",
             "location": "Delhi Technological University",
             "city": "Delhi, India",
-            "guests": "728 guests"
+            "guests": "728 guests",
+            "link": "https://www.facebook.com/events/932337890273954/"
         },
         {
             "name": "IOSD Christmas Challenge",
             "date": "Mon 14:00 UTC+05:30",
             "location": "hack.codingblocks.com",
             "city": "",
-            "guests": "98 guests"
+            "guests": "98 guests",
+            "link": "https://www.facebook.com/events/778411669012297/"
         },
         {
             "name": "IOSD October Challenge (Online)",
             "date": "Sun 20:00 UTC+05:30",
             "location": "Online From Home",
             "city": "",
-            "guests": "112 guests"
+            "guests": "112 guests",
+            "link": "https://www.facebook.com/events/128588831180739/"
         },
         {
             "name": "IOSD Hacktoberfest Meetup",
             "date": "Mon 17:00 UTC+05:30",
             "location": "Delhi Technological University",
             "city": "Delhi, India",
-            "guests": "346 guests"
+            "guests": "346 guests",
+            "link": "https://www.facebook.com/events/125273371563394/"
         },
         {
             "name": "Code In Less | Synergy 2.0",
             "date": "Sat 11:00 UTC+05:30",
             "location": "Delhi Technological University",
             "city": "Delhi, India",
-            "guests": "732 guests"
+            "guests": "732 guests",
+            "link": "https://www.facebook.com/events/478751102483866/"
         }
     ],
     "Led-zepplin-458226214198430": [
@@ -154,14 +175,16 @@
             "date": "Sun 02:00 UTC+05:30",
             "location": "New Delhi",
             "city": "New Delhi",
-            "guests": "Hosted by Led zepplin"
+            "guests": "Hosted by Led zepplin",
+            "link": "https://www.facebook.com/events/327715791414100/"
         },
         {
             "name": "Test",
             "date": "Thu 01:00 UTC+05:30",
             "location": "New Delhi",
             "city": "New Delhi",
-            "guests": "Hosted by Led zepplin"
+            "guests": "Hosted by Led zepplin",
+            "link": "https://www.facebook.com/events/320595011889804/"
         }
     ]
 }

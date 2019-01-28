@@ -6,7 +6,7 @@ const getEventURL = (pageID) => `https://facebook.com/pg/${pageID}/events`;
 
 async function run() {
     const browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
         defaultViewport: { width: 1920, height: 926 },
         args: ['--lang=en-US,en']
     });
@@ -30,7 +30,9 @@ async function run() {
                     let finalDate = date.childNodes[1].innerText + " " + date.childNodes[0].innerText;
             
                     let details = event.childNodes[1].firstElementChild;
-                    let name = details.childNodes[0].firstElementChild.firstElementChild.innerText;
+                    let title = details.childNodes[0].firstElementChild;
+                    let link = title.href; 
+                    let name = title.firstElementChild.innerText;
                     let realDate = details.childNodes[1].childNodes[0].innerText;
                     let guests = details.childNodes[1].childNodes[2].textContent;
             
@@ -43,7 +45,8 @@ async function run() {
                         date: realDate,
                         location: exact,
                         city,
-                        guests
+                        guests,
+                        link: link.slice(0, 48)
                     })
                 } catch (err) {
                     console.log(err);
