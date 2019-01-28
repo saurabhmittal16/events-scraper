@@ -15,7 +15,7 @@ async function run() {
     const res = {};
     for(let j=0; j<pages.length; j++) {
         await page.goto(getEventURL(pages[j]));
-        await page.waitFor(5000);
+        await page.waitForSelector('div#past_events_card');
         await page.evaluate(() => window.scrollBy(0, window.innerHeight));
         await page.waitFor(5000);
     
