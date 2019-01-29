@@ -5,6 +5,7 @@ const scrape = require('./facebook');
 const single = require('./singleEvent');
 
 const init = async () => {
+    console.time("Events Scraped");
     const data = await scrape();
     Object.keys(data).forEach(
         soc => {
@@ -18,16 +19,18 @@ const init = async () => {
             )
         }
     );
-    console.log("Events Scraped");
+    console.timeEnd("Events Scraped");
 
+    console.time("Details Scraped");
     const res = await single();
-    console.log("Details Added");
+    console.timeEnd("Details Scraped");
 }
 
 mongoose.connect('mongodb://localhost:27017/eventhub', {useNewUrlParser: true})
     .then(
         async () => {
             console.log("Connected to DB");
-            await init();            
+            await init();
+            process.exit(0);            
         }
     );

@@ -5,7 +5,7 @@ const result = require('../result.json');
 
 const run = async () => {
     const browser = await puppeteer.launch({
-        headless: true,
+        headless: false,
         args: ['--lang=en-US,en']
     });
     const page = await browser.newPage();
