@@ -1,22 +1,33 @@
-const fs = require('fs')
+const mongoose = require('mongoose');
+
+const Event = require('./models/event');
 const scrape = require('./facebook');
 const single = require('./singleEvent');
 
 const init = async () => {
     const data = await scrape();
-    fs.writeFileSync('result.json', JSON.stringify(data, null, 4), (err) => {
-        if (err)
-            console.log('Error writing file')
-        else
-            console.log("Saved result.json")
-    });
-    const updatedData = await single();
-    fs.writeFileSync('result.json', JSON.stringify(updatedData, null, 4), (err) => {
-        if (err)
-            console.log('Error writing file')
-        else
-            console.log("Updated result.json")
-    });
+    Object.keys(data).forEach(
+        soc => {
+            data[soc].forEach(
+                async event => {
+                    await Event.create({
+                        ...event,
+                        organiser: soc
+                    });
+                }
+            )
+        }
+    );
+    console.log("Events Scraped");
+
+    const res = await single();
+    console.log("Details Added");
 }
 
-init();
+mongoose.connect('mongodb://localhost:27017/eventhub', {useNewUrlParser: true})
+    .then(
+        async () => {
+            console.log("Connected to DB");
+            await init();            
+        }
+    );
