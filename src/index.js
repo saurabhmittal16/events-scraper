@@ -33,7 +33,9 @@ const init = async () => {
     const res = await single();
     console.timeEnd("Details Scraped");
 
-    fs.writeFileSync('last.json', JSON.stringify({date: new Date()}), (err) => {
+    // Call write to firebase and then update the lastUpdated date
+
+    fs.writeFileSync('last.json', Date.now().toString(), (err) => {
         if (!err) console.log(err);
     });
 }

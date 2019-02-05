@@ -1,7 +1,6 @@
 const puppeteer = require('puppeteer');
 
 const Event = require('./models/event');
-const result = require('../result.json');
 
 const run = async () => {
     const browser = await puppeteer.launch({
@@ -33,12 +32,16 @@ const run = async () => {
                     realDate,
                     hostedBy
                 }
-            })
-            events[i]["details"] = data.details;
-            events[i]["image"] = data.image;
-            events[i]["realDate"] = data.realDate;
-            events[i]["hostedBy"] = data.hostedBy;
-            events[i].save();
+            });
+
+            if (
+                events[i]["details"] != data.details ||
+                events[i]["image"] != data.image || 
+                events[i]["realDate"] != data.realDate || 
+                events[i]["hostedBy"] != data.hostedBy
+            ) {
+                events[i].save();
+            }
         } catch (err) { 
             console.log(err);
         }
