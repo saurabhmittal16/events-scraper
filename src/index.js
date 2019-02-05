@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const fs = require('fs');
 
 const Event = require('./models/event');
 const scrape = require('./facebook');
@@ -13,7 +14,6 @@ const init = async () => {
                 async event => {
                     try {
                         const foundEvent = await Event.findOne({eventID: event.eventID});
-                        // console.log(foundEvent);
                         if (!foundEvent) {
                             await Event.create({
                                 ...event,
@@ -32,6 +32,10 @@ const init = async () => {
     console.time("Details Scraped");
     const res = await single();
     console.timeEnd("Details Scraped");
+
+    fs.writeFileSync('last.json', JSON.stringify({date: new Date()}), (err) => {
+        if (!err) console.log(err);
+    });
 }
 
 mongoose.connect('mongodb://localhost:27017/eventhub', {useNewUrlParser: true})

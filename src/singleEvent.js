@@ -39,7 +39,7 @@ const run = async () => {
             events[i]["realDate"] = data.realDate;
             events[i]["hostedBy"] = data.hostedBy;
             events[i].save();
-        } catch (err) {
+        } catch (err) { 
             console.log(err);
         }
     }
