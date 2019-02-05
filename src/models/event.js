@@ -10,7 +10,8 @@ const eventSchema = new mongoose.Schema({
     image: String,
     details: String,
     organiser: String,
-    hostedBy: String
+    hostedBy: String,
+    eventID: String
 }, {
     versionKey: false
 });

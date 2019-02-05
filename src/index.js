@@ -11,10 +11,18 @@ const init = async () => {
         soc => {
             data[soc].forEach(
                 async event => {
-                    await Event.create({
-                        ...event,
-                        organiser: soc
-                    });
+                    try {
+                        const foundEvent = await Event.findOne({eventID: event.eventID});
+                        // console.log(foundEvent);
+                        if (!foundEvent) {
+                            await Event.create({
+                                ...event,
+                                organiser: soc
+                            });
+                        }
+                    } catch (err) {
+                        console.log(err);
+                    }
                 }
             )
         }
