@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-const pages = require('./pages')
+const pages = require('../pages')
 
 const getEventURL = (pageID) => `https://facebook.com/pg/${pageID}/events`;
 

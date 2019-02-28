@@ -2,8 +2,8 @@ const mongoose = require('mongoose');
 const fs = require('fs');
 
 const Event = require('./models/event');
-const scrape = require('./facebook');
-const single = require('./singleEvent');
+const scrape = require('./scrape/main');
+const single = require('./scrape/singleEvent');
 
 const init = async () => {
     console.time("Events Scraped");

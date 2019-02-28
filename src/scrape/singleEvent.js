@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-const Event = require('./models/event');
+const Event = require('../models/event');
 
 const run = async () => {
     const browser = await puppeteer.launch({
