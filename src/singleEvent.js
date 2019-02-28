@@ -26,6 +26,14 @@ const run = async () => {
                 let z = document.querySelector('div[data-testid="event_permalink_feature_line"]');
                 let hostedBy = z.firstElementChild.innerText;
 
+                /*
+                    var x = document.querySelector('#u_0_1f > div > div > div._62hs._4-u3 > div > ul > a');
+                    x.click()
+                    x = document.querySelectorAll('#u_0_1f > div > div > div._62hs._4-u3 > div > ul > li');
+                    x = [...x]
+                    x.forEach(ele => console.log(ele.innerText))
+                */
+
                 return {
                     details: details.innerText,
                     image: image.src,
@@ -40,6 +48,10 @@ const run = async () => {
                 events[i]["realDate"] != data.realDate || 
                 events[i]["hostedBy"] != data.hostedBy
             ) {
+                events[i]["details"] = data.details;	
+                events[i]["image"] = data.image;
+                events[i]["realDate"] = data.realDate;
+                events[i]["hostedBy"] = data.hostedBy; 
                 events[i].save();
             }
         } catch (err) { 

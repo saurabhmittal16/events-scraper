@@ -11,7 +11,9 @@ const eventSchema = new mongoose.Schema({
     details: String,
     organiser: String,
     hostedBy: String,
-    eventID: String
+    eventID: String,
+    categories: [String],
+    isTech: Boolean
 }, {
     versionKey: false,
     timestamps: {
