@@ -12,6 +12,8 @@
     "puppeteer": "^1.11.0"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "yarn run scrape && yarn run upload",
+    "scrape": "node src/index.js",
+    "upload": "node src/firebase.js"
   }
 }
