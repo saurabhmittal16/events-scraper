@@ -27,13 +27,13 @@ async function run() {
                 try {
                     let event = events[i].firstElementChild.firstElementChild.firstElementChild;
                     let date = event.childNodes[0].firstElementChild;
-                    let finalDate = date.childNodes[1].innerText + " " + date.childNodes[0].innerText;
+                    // let finalDate = date.childNodes[1].innerText + " " + date.childNodes[0].innerText;
             
                     let details = event.childNodes[1].firstElementChild;
                     let title = details.childNodes[0].firstElementChild;
                     let link = title.href; 
                     let name = title.firstElementChild.innerText;
-                    let realDate = details.childNodes[1].childNodes[0].innerText;
+                    // let realDate = details.childNodes[1].childNodes[0].innerText;
                     let guests = details.childNodes[1].childNodes[2].textContent;
             
                     let loc = event.childNodes[2].firstElementChild;
@@ -43,7 +43,6 @@ async function run() {
         
                     es.push({
                         name,
-                        date: realDate,
                         location: exact,
                         city,
                         guests,

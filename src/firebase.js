@@ -21,14 +21,17 @@ const writeData = async (event) => {
         name: event.name || '',
         image: event.image || '',
         descp: event.details || '',
-        date: event.realDate || '',
+        date: event.start || '',
+        realDate: event.realDate || '',
         categories: event.categories || [],
         location: event.location || '',
         link: event.link || '',
         organiser: event.organiser || '',
         hostedBy: event.hostedBy || '',
         isTech: event.isTech || '',
-        guests: event.guest || ''
+        guests: event.guest || '',
+        start: event.start || '',
+        end: event.end || ''
     };
     return ref.doc(event.eventID).set(temp);
 }
