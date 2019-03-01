@@ -27,9 +27,9 @@ const writeData = async (event) => {
         location: event.location || '',
         link: event.link || '',
         organiser: event.organiser || '',
+        college: 'Delhi Technological University',
         hostedBy: event.hostedBy || '',
-        isTech: event.isTech || '',
-        guests: event.guest || '',
+        isTech: event.isTech || false,
         start: event.start || '',
         end: event.end || ''
     };
