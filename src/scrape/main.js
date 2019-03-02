@@ -45,7 +45,6 @@ async function run() {
                         name,
                         location: exact,
                         city,
-                        guests,
                         eventID,
                         link: link.slice(0, 48)
                     })

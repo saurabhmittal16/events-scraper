@@ -20,18 +20,18 @@ const writeData = async (event) => {
     let temp = {
         name: event.name || '',
         image: event.image || '',
-        descp: event.details || '',
+        details: event.details || '',
         date: event.start || '',
         realDate: event.realDate || '',
-        categories: event.categories || [],
+        keywords: event.categories || [],
         location: event.location || '',
         link: event.link || '',
+        society: event.hostedBy || '',
         organiser: event.organiser || '',
-        college: 'Delhi Technological University',
+        college: 'DTU',
         hostedBy: event.hostedBy || '',
-        isTech: event.isTech || false,
-        start: event.start || '',
-        end: event.end || ''
+        tech: event.isTech || false,
+        endDate: event.end || ''
     };
     return ref.doc(event.eventID).set(temp);
 }

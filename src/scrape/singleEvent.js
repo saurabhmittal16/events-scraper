@@ -15,6 +15,8 @@ const run = async () => {
         try {
             await page.goto(events[i].link);
             await page.waitForSelector('div[data-testid="event-permalink-details"]');
+            await page.waitForSelector('#event_guest_list');
+            await page.waitForSelector("div#event_summary tbody tr");
 
             const data = await page.evaluate(() => {
                     let details = document.querySelector('div[data-testid="event-permalink-details"]');
