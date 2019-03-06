@@ -39,7 +39,7 @@ async function run() {
                     let loc = event.childNodes[2].firstElementChild;
                     let exact = loc.childNodes[0].firstElementChild.innerText;
                     let city = loc.childNodes[1].innerText;
-                    let eventID = link.slice(33, 47);
+                    let eventID = link.slice(32, 47);
         
                     es.push({
                         name,

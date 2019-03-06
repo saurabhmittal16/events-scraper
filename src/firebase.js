@@ -22,16 +22,16 @@ const writeData = async (event) => {
         image: event.image || '',
         details: event.details || '',
         date: event.start || '',
-        realDate: event.realDate || '',
-        keywords: event.categories || [],
+        //realDate: event.realDate || '',
+        //keywords: event.categories || [],
         location: event.location || '',
-        link: event.link || '',
+        // link: event.link || '',
         society: event.hostedBy || '',
-        organiser: event.organiser || '',
+        // organiser: event.organiser || '',
         college: 'DTU',
-        hostedBy: event.hostedBy || '',
+        //hostedBy: event.hostedBy || '',
         tech: event.isTech || false,
-        endDate: event.end || ''
+        //endDate: event.end || ''
     };
     return ref.doc(event.eventID).set(temp);
 }
