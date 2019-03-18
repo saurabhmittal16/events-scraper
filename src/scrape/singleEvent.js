@@ -22,22 +22,8 @@ const run = async () => {
             await page.waitForSelector("div#event_summary tbody tr");
 
             const data = await details(page);
-            console.log(data.image);
-            // if (
-            //     events[i]["details"] != data.details ||
-            //     events[i]["image"] != data.image || 
-            //     events[i]["realDate"] != data.realDate || 
-            //     events[i]["hostedBy"] != data.hostedBy
-            // ) { }
-
-            // Event.findOneAndUpdate({eventID: event.eventID}, data)
-
-            events[i]["details"] = data.details;	
-            events[i]["image"] = data.image;
-            events[i]["realDate"] = data.realDate;
-            events[i]["hostedBy"] = data.hostedBy;
-            events[i].save();
-
+            events[i] = Object.assign(events[i], data);
+            await events[i].save();
         } catch (err) { 
             console.log(err);
         }

@@ -27,12 +27,8 @@ const run = async () => {
 
             const data = await details(page);
 
-            events[i]["details"] = data.details;	
-            events[i]["image"] = data.image;
-            events[i]["realDate"] = data.realDate;
-            events[i]["hostedBy"] = data.hostedBy;
-            events[i].save();
-
+            events[i] = Object.assign(events[i], data);
+            await events[i].save();
         } catch (err) { 
             console.log(err);
         }
