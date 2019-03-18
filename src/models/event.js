@@ -17,8 +17,8 @@ const eventSchema = new mongoose.Schema({
     details: String,
     hostedBy: String,
     eventID: String,
-    categories: [String],
-    isTech: Boolean
+    // categories: [String],
+    // isTech: Boolean
 }, {
     versionKey: false,
     timestamps: {
@@ -68,8 +68,6 @@ const keys = [
     'details',
     'hostedBy',
     'eventID',
-    'categories',
-    'isTech'
 ];
 
 eventSchema.methods.hasUndefined = function() {

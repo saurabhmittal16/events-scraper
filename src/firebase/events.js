@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 const admin = require("firebase-admin");
-const Event = require('./models/event');
+const Event = require('../models/event');
 
 const serviceAccount = require("./serviceAccount.json");
 

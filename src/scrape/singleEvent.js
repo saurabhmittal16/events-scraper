@@ -19,25 +19,25 @@ const run = async () => {
         try {
             await page.goto(events[i].link);
             await page.waitForSelector('div[data-testid="event-permalink-details"]');
-            await page.waitForSelector('#event_guest_list');
             await page.waitForSelector("div#event_summary tbody tr");
 
             const data = await details(page);
+            console.log(data.image);
+            // if (
+            //     events[i]["details"] != data.details ||
+            //     events[i]["image"] != data.image || 
+            //     events[i]["realDate"] != data.realDate || 
+            //     events[i]["hostedBy"] != data.hostedBy
+            // ) { }
 
-            if (
-                events[i]["details"] != data.details ||
-                events[i]["image"] != data.image || 
-                events[i]["realDate"] != data.realDate || 
-                events[i]["hostedBy"] != data.hostedBy
-            ) {
-                events[i]["details"] = data.details;	
-                events[i]["image"] = data.image;
-                events[i]["realDate"] = data.realDate;
-                events[i]["hostedBy"] = data.hostedBy;
-                events[i]["categories"] = data.categories;
-                events[i]["isTech"] = data.isTech; 
-                events[i].save();
-            }
+            // Event.findOneAndUpdate({eventID: event.eventID}, data)
+
+            events[i]["details"] = data.details;	
+            events[i]["image"] = data.image;
+            events[i]["realDate"] = data.realDate;
+            events[i]["hostedBy"] = data.hostedBy;
+            events[i].save();
+
         } catch (err) { 
             console.log(err);
         }

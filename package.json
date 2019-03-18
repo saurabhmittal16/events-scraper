@@ -14,7 +14,8 @@
   "scripts": {
     "start": "yarn run scrape && yarn run test && yarn run upload",
     "scrape": "node src/index.js",
-    "upload": "node src/firebase.js",
+    "upload": "node src/firebase/events.js",
+    "pages": "node src/firebase/pages.js",
     "test": "node src/test.js"
   }
 }
