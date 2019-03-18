@@ -17,8 +17,6 @@ const db = admin.firestore();
 const ref = db.collection('events');
 const mini_ref = db.collection('events_mini');
 
-const curr = new Date().getTime();
-
 const writeData = async (event) => {
     let temp = {
         name: event.name || '',
