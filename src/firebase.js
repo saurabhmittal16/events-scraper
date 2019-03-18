@@ -24,16 +24,12 @@ const writeData = async (event) => {
         image: event.image || '',
         details: event.details || '',
         date: event.start || '',
-        //realDate: event.realDate || '',
-        //keywords: event.categories || [],
         location: event.location || '',
-        // link: event.link || '',
-        society: event.hostedBy || '',
-        // organiser: event.organiser || '',
+        society: event.society_name || '',
+        society_id: event.society_id || '',
+        society_fullname: event.hostedBy || '',
         college: 'DTU',
-        //hostedBy: event.hostedBy || '',
         tech: event.isTech || false,
-        //endDate: event.end || ''
     };
     return ref.doc(event.eventID).set(temp);
 }

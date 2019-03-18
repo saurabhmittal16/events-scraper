@@ -2,7 +2,7 @@
 
 const puppeteer = require('puppeteer');
 
-const pages = require('../pages').pages;
+const pages = Object.keys(require('../../pages'));
 
 const getEventURL = (pageID) => `https://facebook.com/pg/${pageID}/events`;
 

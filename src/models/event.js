@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const map = require('../pages').map;
+const data = require('../../pages');
 
 const eventSchema = new mongoose.Schema({
     name: String,
@@ -50,7 +50,7 @@ eventSchema.pre('save', function(next) {
         event.end = new Date(end);
     }
     if (!event.society_name) {
-        event.society_name = map[event.society_id];
+        event.society_name = data[event.society_id].name;
     }
     next();
 });
