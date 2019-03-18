@@ -5,6 +5,7 @@ const Event = require('../models/event');
 const run = async () => {
     const browser = await puppeteer.launch({
         headless: false,
+        defaultViewport: { width: 1920, height: 926 },
         args: ['--lang=en-US,en']
     });
     const page = await browser.newPage();

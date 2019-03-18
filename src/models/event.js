@@ -1,8 +1,11 @@
 const mongoose = require('mongoose');
+const map = require('../pages').map;
 
 const eventSchema = new mongoose.Schema({
     name: String,
     date: String,
+    society_name: String,
+    society_id: String,
     // stores start date (temporarily)
     realDate: String,
     // stores date as string
@@ -14,7 +17,6 @@ const eventSchema = new mongoose.Schema({
     link: String,
     image: String,
     details: String,
-    organiser: String,
     hostedBy: String,
     eventID: String,
     categories: [String],
@@ -48,6 +50,9 @@ eventSchema.pre('save', function(next) {
         }
         event.start = new Date(start);
         event.end = new Date(end);
+    }
+    if (!event.society_name) {
+        event.society_name = map[event.society_id];
     }
     next();
 });
