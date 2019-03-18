@@ -15,6 +15,7 @@ admin.firestore().settings( { timestampsInSnapshots: true });
 
 const db = admin.firestore();  
 const ref = db.collection('events');
+const mini_ref = db.collection('events_mini');
 
 const curr = new Date().getTime();
 
@@ -30,11 +31,24 @@ const writeData = async (event) => {
         society_fullname: event.hostedBy || '',
         college: 'DTU',
         tech: event.isTech || false,
+        keywords: event.categories || []
     };
     return ref.doc(event.eventID).set(temp);
 }
 
-// write events to firebase that were created or modified withing 60 minutes of current date
+const writeMiniData = async (event) => {
+    let temp = {
+        name: event.name || '',
+        image: event.image || '',
+        date: event.start || '',
+        location: event.location || '',
+        society: event.society_name || '',
+        college: 'DTU',
+        tech: event.isTech || false,
+    };
+    return mini_ref.doc(event.eventID).set(temp);
+}
+
 mongoose.connect('mongodb://localhost:27017/eventhub', {useNewUrlParser: true})
     .then(
         async () => {
@@ -47,6 +61,7 @@ mongoose.connect('mongodb://localhost:27017/eventhub', {useNewUrlParser: true})
         events => events.forEach(
             async (event, index) => {                
                 await writeData(event);
+                await writeMiniData(event);
                 if (index === events.length - 1) {
                     console.log("Uploaded");
                     process.exit(0);
