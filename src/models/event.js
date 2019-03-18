@@ -3,7 +3,6 @@ const map = require('../pages').map;
 
 const eventSchema = new mongoose.Schema({
     name: String,
-    date: String,
     society_name: String,
     society_id: String,
     // stores start date (temporarily)
@@ -13,7 +12,6 @@ const eventSchema = new mongoose.Schema({
     end: Date,
     // start and end date of events
     location: String,
-    guests: String,
     link: String,
     image: String,
     details: String,
@@ -56,5 +54,30 @@ eventSchema.pre('save', function(next) {
     }
     next();
 });
+
+const keys = [
+    'name',
+    'society_name',
+    'society_id',
+    'realDate',
+    'start',
+    'end',
+    'location',
+    'link',
+    'image',
+    'details',
+    'hostedBy',
+    'eventID',
+    'categories',
+    'isTech'
+];
+
+eventSchema.methods.hasUndefined = function() {
+    const event = this;
+    // ans -> true if every attribute is not undefined
+    let ans = keys.every(key => event[key] !== undefined);
+    // return true if event has undefined attributes
+    return !ans;
+}
 
 module.exports = mongoose.model('event', eventSchema);

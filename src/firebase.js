@@ -1,3 +1,5 @@
+/* Upload events to Firebase */
+
 const mongoose = require('mongoose');
 const admin = require("firebase-admin");
 const Event = require('./models/event');

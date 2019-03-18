@@ -1,3 +1,5 @@
+/* Driver file for the application */
+
 const mongoose = require('mongoose');
 
 const Event = require('./models/event');
@@ -47,4 +49,3 @@ mongoose.connect('mongodb://localhost:27017/eventhub', {useNewUrlParser: true})
             process.exit(0);            
         }
     );
- 
