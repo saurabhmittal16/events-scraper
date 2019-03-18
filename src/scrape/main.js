@@ -1,3 +1,5 @@
+/* Scrapes the event list of all pages provided to the scraper */
+
 const puppeteer = require('puppeteer');
 
 const pages = require('../pages').pages;

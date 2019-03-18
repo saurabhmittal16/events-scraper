@@ -1,0 +1,1 @@
+/* Check for events that have some fields missing and rescrape those details */
