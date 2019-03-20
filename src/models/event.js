@@ -33,19 +33,21 @@ eventSchema.pre('save', function(next) {
         let start, end;
         if (event.realDate) {
             let arr = event.realDate.split(' ');
-            if (arr.length === 7) {
-                if (arr[4] === 'at') {
-                    start = arr[1] + ' ' + arr[2] + ' ' + arr[3] + ' ' + arr[5];
-                    end = start;
-                } else {
-                    arr[5] = arr[5].split('-');
-                    start = arr[1] + ' ' + arr[2] + ' ' + arr[3] + ' ' + arr[5][0];
-                    end = arr[1] + ' ' + arr[2] + ' ' + arr[3] + ' ' + arr[5][1];
+            if (arr[4] === "from") {
+                arr[5] = arr[5].split("-");
+                start = arr[1] + " " + arr[2] + " " + arr[3] + " " + arr[5][0];
+                end = arr[1] + " " + arr[2] + " " + arr[3] + " " + arr[5][1];
+            } else if (arr[4] === "at") {
+                start = arr[1] + " " + arr[2] + " " + arr[3] + " " + arr[5];
+                end = start;
+            } else {
+                if (arr[3] === "at") {
+                    start = arr[0] + " " + arr[1] + " " + arr[2] + " " + arr[4];
+                    end = arr[6] + " " + arr[7] + " " + arr[8] + " " + arr[10];
+                } else if (arr[2] === "at") {
+                    start = arr[0] + " " + arr[1] + " " + "2018" + " " + arr[3];
+                    end = arr[5] + " " + arr[6] + " " + "2018" + " " + arr[8];
                 }
-            }
-            else {
-                start = arr[0] + ' ' + arr[1] + ' ' + arr[2] + ' ' + arr[4];
-                end = arr[6] + ' ' + arr[7] + ' ' + arr[8] + ' ' + arr[10]; 
             }
             event.start = new Date(start);
             event.end = new Date(end);

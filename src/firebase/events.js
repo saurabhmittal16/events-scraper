@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const admin = require("firebase-admin");
 const Event = require('../models/event');
 
-const serviceAccount = require("./serviceAccount.json");
+const serviceAccount = require('../serviceAccount.json');
 
 // Firebase initialization
 admin.initializeApp({
@@ -23,7 +23,7 @@ const writeData = async (event) => {
         image: event.image || '',
         details: event.details || '',
         date: event.start || '',
-        location: event.location || '',
+        location: event.location === "" ? "No location" : event.location,
         society: event.society_name || '',
         society_id: event.society_id || '',
         society_fullname: event.hostedBy || '',
@@ -57,13 +57,15 @@ mongoose.connect('mongodb://localhost:27017/eventhub', {useNewUrlParser: true})
     )
     .then(
         events => events.forEach(
-            async (event, index) => {                
-                await writeData(event);
-                await writeMiniData(event);
-                if (index === events.length - 1) {
-                    console.log("Uploaded");
-                    process.exit(0);
-                }
+            async (event, index) => {
+                if (!event.hasUndefined()) {
+                    await writeData(event);
+                    await writeMiniData(event);
+                    if (index === events.length - 1) {
+                        console.log("Uploaded");
+                        process.exit(0);
+                    }
+                }        
             }
         )
     );
