@@ -1,4 +1,12 @@
 module.exports = {
+    'googledscdtu': {
+        name: 'DSC DTU',
+        pos: 0,
+        fullName: 'Developer Student Club DTU - Powered by Google Developers',
+        college: 'DTU',
+        image: 'https://scontent.fdel1-4.fna.fbcdn.net/v/t1.0-1/c1.0.200.200a/p200x200/56191306_441428739995514_3732337738549035008_n.jpg?_nc_cat=105&_nc_ht=scontent.fdel1-4.fna&oh=023eb477065cc4c66258cc56a41d4fbc&oe=5D084553',
+        descp: 'The Developer Student Club branch of DTU powered by Google Developers'
+    },
     'iosdofficial': {
         name: 'IOSD',
         pos: 1,
@@ -6,15 +14,6 @@ module.exports = {
         college: 'DTU',
         image: 'https://scontent.fdel7-1.fna.fbcdn.net/v/t1.0-9/19429987_2345311559026630_7563430885403098814_n.png?_nc_cat=102&_nc_ht=scontent.fdel7-1.fna&oh=b14b09dbfc939de88ecd885aa86935c2&oe=5D260758',
         descp: 'We provide a platform for developers to come together and create projects, discuss ideas and learn in a competitive healthy environment.'
-    },
-
-    'Led-zepplin-458226214198430': {
-        name: 'Led Zepplin',
-        pos: 8,
-        fullName: 'Led Zepplin',
-        college: 'DTU',
-        image: 'https://scontent.fdel1-1.fna.fbcdn.net/v/t1.0-1/c18.15.191.191a/223833_458227397531645_2132665591_n.jpg?_nc_cat=109&_nc_ht=scontent.fdel1-1.fna&oh=e47ce5ff120c6e983eecc318e1cc0de2&oe=5D0610C6',
-        descp: 'A rock band'
     },
 
     'ieeedtu': {
