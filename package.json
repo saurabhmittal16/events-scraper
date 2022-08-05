@@ -9,7 +9,7 @@
     "axios": "^0.19.0",
     "firebase": "^5.8.0",
     "firebase-admin": "^6.5.1",
-    "mongoose": "^5.4.7",
+    "mongoose": "^5.7.5",
     "puppeteer": "^1.18.1"
   },
   "scripts": {
